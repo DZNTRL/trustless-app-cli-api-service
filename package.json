@@ -1,0 +1,16 @@
+{
+  "name": "pro-web-app-cli-api-service",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "repository": "git@github.com:joshuaebowling/pro-web-app-cli-api-service.git",
+  "author": "joshuaebowling <joshuaebowling@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx tsc --skipLibCheck && node ./changeUpdate"
+  },
+  "dependencies": {
+    "pro-web-core": "./pro-web-core",
+    "axios": "^0.22.0",
+    "config": "^3.3.6"
+  }
+}

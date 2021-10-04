@@ -1,0 +1,1 @@
+Until the interfaces are factored out of core, we have to import core. Core is all the backend stuff as well. For some this may seem like a problem. At present, none of the potential issues seem big enough to prevent use of Core in this project.
