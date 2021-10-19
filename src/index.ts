@@ -1,7 +1,9 @@
 import { User } from "./User"
 
-export function createServices(baseUrl: string, jwt: string) {
-    return {
-        user: new User(jwt, baseUrl)
-    }
+export interface IServices {
+    User
+}
+
+export const Services: IServices = {
+    User
 }

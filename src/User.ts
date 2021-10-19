@@ -1,12 +1,14 @@
-import { IResponse } from "pro-web-core"
+import { IResponse } from "pro-web-common/dist/js/interfaces/IResponse"
 import { Base } from "./base"
 
 export class User extends Base {
-    constructor(jwt: string, baseUrl: string) {
-        super(jwt, baseUrl)
+    baseUrl: string
+    constructor(baseUrl: string = "") {
+        super()
+        this.baseUrl = baseUrl
     }
     async checkUsernameUnique(username: string) {
-        return this.get(`${this.baseUrl}/user/unique/${username}`) as unknown as Promise<IResponse<boolean>>
+        return this.get(`${this.baseUrl}/api/user/unique/${username}`) as unknown as Promise<IResponse<boolean>>        
     }
     async requestLogin(username: string) {
         return this.get(`${this.baseUrl}/request-session/${username}`) as unknown as Promise<IResponse<string>>
