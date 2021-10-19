@@ -9,8 +9,8 @@
     "build": "npx tsc --skipLibCheck && node ./changeUpdate"
   },
   "dependencies": {
-    "pro-web-core": "./pro-web-core",
-    "axios": "^0.22.0",
-    "config": "^3.3.6"
+    "pro-web-core": "1.0.0",
+    "pro-web-common": "1.0.0",
+    "axios": "^0.22.0"
   }
 }
