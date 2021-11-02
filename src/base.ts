@@ -5,7 +5,7 @@ export abstract class Base {
     get<T>(url: string) {
         return axios.get<T>(url)
     }
-    post(url: string, payload: any) {
-        return axios.post(url, payload)
+    post<T>(url: string, payload: any) {
+        return axios.post<T>(url, payload)
     }
 }
